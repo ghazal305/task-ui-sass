@@ -157,4 +157,64 @@ footer .small {
 }
 footer hr {
   border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 991.98px) {
+  .search-form {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .testq {
+    display: none !important;
+  }
+  .navbar .container {
+    gap: 0.5rem;
+  }
+  .navbar .btn-success {
+    min-width: 140px;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.5rem;
+  }
+  .navbar .navbar-collapse {
+    width: 100%;
+    order: 2;
+  }
+}
+@media (max-width: 573px) {
+  .custom-hide-below-574 {
+    display: none !important;
+  }
+  .custom-block-below-574 {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-5th {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+.product-card {
+  transition: transform 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 15px;
+}
+
+.category-tabs li {
+  cursor: pointer;
+}
+.category-tabs li:hover {
+  color: #3bb77e !important;
 }/*# sourceMappingURL=main.css.map */
