@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food App</title>
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="scss/main.css" />
+  </head>
+  <!-- Bootstrap JS -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="images/logo.svg fill.png" alt="logo" />
+          <h3 class="mb-0">logo</h3>
+        </a>
+        <div class="input-group">
+          <button
+            class="btn btn-light dropdown-toggle border-0 border-start"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            all catigories
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> catigory 1</a></li>
+            <li><a class="dropdown-item" href="#"> catigory 2 </a></li>
+            <li><a class="dropdown-item" href="#"> catigory 3</a></li>
+          </ul>
+
+          <input
+            type="text"
+            class="form-control border-start"
+            placeholder="search for item"
+          />
+          <button class="btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="fs-6">YourLocation</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-heart"></i>
+                <span class="fs-6">Wishlist</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="fs-6">Cart</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-user"></i>
+                <span class="fs-6">Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Category Links Section -->
+    <section
+      class="othernav d-none d-lg-block links py-3 border-top border-bottom border-0 border-secondary"
+    >
+      <div class="container">
+        <div class="lists">
+          <!-- Category Dropdown -->
+          <div class="input-group">
+            <button
+              class="btn dropdown-toggle d-flex align-items-center gap-2 bg-success"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="./images/blocks.svg"
+                alt="Categories"
+                class="img-fluid"
+              />
+              <span>সব ক্যাটেগরি ব্রাউজ করুন</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Fruits</a></li>
+              <li><a class="dropdown-item" href="#">Vegetables</a></li>
+              <li><a class="dropdown-item" href="#">Snacks</a></li>
+            </ul>
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="navbar-nav d-flex flex-row gap-4">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <img src="./images/fire.svg" alt="Offers" class="img-fluid" />
+                <span>অফার</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">হোম</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">দোকান</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                বিক্রেতা
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                মেগা মেনু
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                পেজ
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">যোগাযোগ</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support Section -->
+        <div class="support">
+          <div class="image-container">
+            <img
+              src="./images/headphones.svg"
+              alt="Support"
+              class="img-fluid"
+            />
+          </div>
+          <div class="support__info">
+            <p class="mb-0">লাইভ চ্যাট</p>
+            <span>24/7 Support Center</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  heroo section-->
+    <section id="hero" class="custom-hide-below-574">
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="outer-carousel py-2">
+                <div class="outer__tabel">
+                  <h4 class="py-2 Top_Selling">Category</h4>
+                  <ul class="d-flex flex-column list-unstyled firstSection">
+                    <li class="p-1 mt-3 d-flex justify-content-between">
+                      <img
+                        src="./images/category-1.svg.png"
+                        alt="Milk"
+                        class="me-2"
+                      />
+                      খাবার
+                      <span class="span-caousi">3</span>
+                    </li>
+                    <li class="p-1 mt-3 d-flex justify-content-between">
+                      <img
+                        src="./images/category-2.svg fill.png"
+                        alt="Tea"
+                        class="me-2"
+                      />
+                      তৈল
+                      <span class="span-caousi ms-3">4</span>
+                    </li>
+                    <li class="p-1 mt-3 d-flex justify-content-between">
+                      <img
+                        src="./images/category-3.svg.png"
+                        alt="Chips"
+                        class="me-2"
+                      />
+                      পোসাক
+                      <span class="span-caousi ms-3">5</span>
+                    </li>
+                    <li class="p-1 mt-3 d-flex justify-content-between">
+                      <img
+                        src="./images/category-4.svg.png"
+                        alt="Big Ships"
+                        class="me-2"
+                      />
+                      Baking material
+                      <span class="span-caousi ms-3">6</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="inner">
+                  <div class="container">
+                    <h1 class="fw-bold text-secondary">
+                      "অবিশ্বাস্য গ্রোসারি <br />ডিল মিস করবেন না"
+                    </h1>
+                    <p class="lead text-muted">
+                      Sign up for the daily newsletter
+                    </p>
+                    <div class="newsletter-group">
+                      <input
+                        type="email"
+                        class="form-control newsletter-input"
+                        placeholder="Your email address"
+                      />
+                      <button
+                        class="btn btn-success newsletter-btn"
+                        type="submit"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="outer-carousel py-2">
+                <div class="outer__tabel">
+                  <h4 class="py-2 Top_Selling">Category</h4>
+                  <ul class="d-flex flex-column list-unstyled firstSection">
+                    <li class="p-3 mt-3 d-flex justify-content-between">
+                      <img
+                        src="asstes/img/category-1.svg.png"
+                        alt="Milk"
+                        class="me-2"
+                      />
+                      Milk
+                      <span class="span-caousi">3</span>
+                    </li>
+                    <li class="p-3 mt-3 d-flex justify-content-between">
+                      <img
+                        src="asstes/img/category-2.svg.png"
+                        alt="Tea"
+                        class="me-2"
+                      />
+                      Tea
+                      <span class="span-caousi ms-3">4</span>
+                    </li>
+                    <li class="p-3 mt-3 d-flex justify-content-between">
+                      <img
+                        src="asstes/img/category-3.svg.png"
+                        alt="Chips"
+                        class="me-2"
+                      />
+                      Chips
+                      <span class="span-caousi ms-3">5</span>
+                    </li>
+                    <li class="p-3 mt-3 d-flex justify-content-between">
+                      <img
+                        src="asstes/img/category-4.svg.png"
+                        alt="Big Ships"
+                        class="me-2"
+                      />
+                      BigShips
+                      <span class="span-caousi ms-3">5</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="inner">
+                  <div class="container">
+                    <h1 class="fw-bold text-secondary">
+                      "অবিশ্বাস্য গ্রোসারি <br />ডিল মিস করবেন না"
+                    </h1>
+                    <p class="lead text-muted">
+                      Sign up for the daily newsletter
+                    </p>
+                    <div class="newsletter-group">
+                      <input
+                        type="email"
+                        class="form-control newsletter-input"
+                        placeholder="Your email address"
+                      />
+                      <button
+                        class="btn btn-success newsletter-btn"
+                        type="submit"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 mt-5 d-sm-none d-md-block custom-hide-below-574">
+            <div class="card shadow-sm">
+              <!-- New products open-->
+              <div class="card-body">
+                <h5 class="card-title border-bottom pb-2 newP">New products</h5>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center mb-3">
+                    <img
+                      src="images/thumbnail-3.jpg.png"
+                      alt="Juice"
+                      class="rounded me-2"
+                      width="40"
+                    />
+                    <div>
+                      <div class="fw-bold text-success">আমের জুস</div>
+                      <div class="small">
+                        $99.50 <span class="text-warning">&#9733;</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <img
+                      src="images/thumbnail-4.jpg.png"
+                      alt="Banana"
+                      class="rounded me-2"
+                      width="40"
+                    />
+                    <div>
+                      <div class="fw-bold text-success">পাকা কলা</div>
+                      <div class="small">
+                        $89.50 <span class="text-warning">&#9733;</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <img
+                      src="images/thumbnail-5.jpg.png"
+                      alt="Guava"
+                      class="rounded me-2"
+                      width="40"
+                    />
+                    <div>
+                      <div class="fw-bold text-success">অমরুদ</div>
+                      <div class="small">
+                        $25 <span class="text-warning">&#9733;</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- New products open-->
+            </div>
+          </div>
+
+          <div class="col-lg-10">
+            <div class="row">
+              <div class="col-12">
+                <div
+                  class="d-flex flex-nowrap justify-content-between align-items-center custom-hide-below-574"
+                >
+                  <h4 class="fw-bold head mb-0">জনপ্রিয় প্রোডাক্ট</h4>
+                  <ul class="d-flex list-unstyled mb-0 p-0">
+                    <li class="px-2 px-md-3 text-success fw-bold">সমস্ত</li>
+                    <li class="px-2 px-md-3">দুধ এবং দই</li>
+                    <li class="px-2 px-md-3">কফি ও চা</li>
+                    <li class="px-2 px-md-3">শাকসবজি</li>
+                    <li class="px-2 px-md-3">ফলমূল</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-md-3 col-lg-5th mb-4 col-sm-1">
+                  <div class="card h-100 product-card">
+                    <span
+                      class="badge bg-danger position-absolute top-0 start-0"
+                      >Hot</span
+                    >
+                    <img
+                      src="images/Link → product-1-1.jpg.png"
+                      class="card-img-top product-img"
+                      alt="প্রোডাক্ট ১"
+                    />
+                    <div class="card-body">
+                      <p class="text-muted small">Snack</p>
+                      <h6 class="fw-bold py-1">
+                        Seeds of Change Organic Quinoa
+                      </h6>
+                      <div class="text-warning small">★ 4.0</div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="fw-bold text-success">$28.85</span>
+
+                        <span
+                          class="text-muted text-decoration-line-through small"
+                          >$32.8</span
+                        >
+
+                        <button
+                          class="btn btn-outline-success btn-sm mt-2 ps-2 ms-"
+                        >
+                          <i class="fa-solid fa-cart-shopping"></i> Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-5th mb-4 col-sm-1">
+                  <div class="card h-100 product-card">
+                    <span
+                      class="badge bg-danger position-absolute top-0 start-0"
+                      >Hot</span
+                    >
+                    <img
+                      src="images/Link → product-2-1.jpg.png"
+                      class="card-img-top product-img"
+                      alt="প্রোডাক্ট ১"
+                    />
+                    <div class="card-body">
+                      <p class="text-muted small">Snack</p>
+                      <h6 class="fw-bold py-1">
+                        All Natural Italian-Style Chicken Meatballs
+                      </h6>
+                      <div class="text-warning small">★ 4.0</div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="fw-bold text-success">$28.85</span>
+
+                        <span
+                          class="text-muted text-decoration-line-through small"
+                          >$32.8</span
+                        >
+
+                        <button
+                          class="btn btn-outline-success btn-sm mt-2 ps-2 ms-"
+                        >
+                          <i class="fa-solid fa-cart-shopping"></i> Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- at small screen
+                -->
+                <div class="col-md-3 col-lg-5th mb-4 col-sm-1">
+                  <div class="card h-100 product-card">
+                    <span
+                      class="badge bg-danger position-absolute top-0 start-0"
+                      >Hot</span
+                    >
+                    <img
+                      src="images/Link → product-3-1.jpg.png"
+                      class="card-img-top product-img"
+                      alt="প্রোডাক্ট ১"
+                    />
+                    <div class="card-body">
+                      <p class="text-muted small">Snack</p>
+                      <h6 class="fw-bold py-1">
+                        Angie’s Boomchickapop Sweet & Salty
+                      </h6>
+                      <div class="text-warning small">★ 4.0</div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="fw-bold text-success">$28.85</span>
+
+                        <span
+                          class="text-muted text-decoration-line-through small"
+                          >$32.8</span
+                        >
+
+                        <button
+                          class="btn btn-outline-success btn-sm mt-2 ps-2 ms-"
+                        >
+                          <i class="fa-solid fa-cart-shopping"></i> Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-lg-5th mb-4 col-sm-12">
+                  <div class="card h-100 product-card">
+                    <span
+                      class="badge bg-danger position-absolute top-0 start-0"
+                      >Hot</span
+                    >
+                    <img
+                      src="images/Link → product-4-1.jpg.png"
+                      class="card-img-top product-img"
+                      alt="প্রোডাক্ট ১"
+                    />
+                    <div class="card-body">
+                      <p class="text-muted small">vegetables</p>
+                      <h6 class="fw-bold py-1">
+                        Foster Farms Takeout Crispy Classic
+                      </h6>
+                      <div class="text-warning small">★ 4.0</div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="fw-bold text-success">$28.85</span>
+
+                        <span
+                          class="text-muted text-decoration-line-through small"
+                          >$32.8</span
+                        >
+
+                        <button
+                          class="btn btn-outline-success btn-sm mt-2 ps-2 ms-"
+                        >
+                          <i class="fa-solid fa-cart-shopping"></i> Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-3 m-5">
+      <div class="col-md-4 d-sm-none d-md-block custom-hide-below-574">
+        <div class="p-4 rounded d-flex flex-column justify-content-center
+        banner-container first-promo" ">
+        <div class="promo__caption">
+          <h5 class="p-5">Everyday Fresh & Clean with Our Products</h5>
+          <button class="btn btn-success btn-sm mt-2 ms-5">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-sm-none d-md-block custom-hide-below-574">
+      <div
+        class="p-4 rounded d-flex flex-column justify-content-center banner-container img-second-promo"
+      >
+        <div class="promo__caption">
+          <h5 class="p-5">Make your Breakfast Healthy and Easy</h5>
+          <button class="btn btn-success btn-sm mt-2 ms-5">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-sm-none d-md-block custom-hide-below-574">
+      <div
+        class="p-4 rounded d-flex flex-column justify-content-center banner-container img-third-promo"
+      >
+        <div class="promo__caption">
+          <h5 class="p-5">Everyday Fresh & Clean with Our Products</h5>
+          <button class="btn btn-success btn-sm mt-2 ms-5">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="p-5 rounded bg-success bg-opacity-10 shadow-sm position-relative"
+    >
+      <div
+        class="newsletter__img2 position-absolute bottom-0 end-0 w-25 bg-transparent"
+      >
+        <img
+          src="asstes/img/banner-9.png.png"
+          class="w-100 bg-transparent"
+          alt=""
+        />
+      </div>
+      <h2 class="fw-bold mb-3">
+        Stay home & get your daily needs from our shop
+      </h2>
+      <p class="mb-4">
+        Start You'R Daily Shopping with
+        <span class="text-success fw-bold">Nest Mart</span>
+      </p>
+      <form class="row justify-content-start g-2">
+        <div class="col-md-4">
+          <div class="newsletter-group">
+            <input
+              type="email"
+              class="form-control newsletter-input"
+              placeholder="Your email address"
+            />
+            <button class="btn btn-success newsletter-btn" type="submit">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="bg-white border-top pt-5 pb-3 position-relative">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-3">
+            <div class="mb-3 d-flex align-items-center">
+              <img
+                src="images/logo.svg fill.png"
+                alt="Logo"
+                width="48"
+                class="me-2"
+              />
+              <span
+                class="fs-4 fw-bold text-dark d-sm-none d-md-block custom-hide-below-574"
+                >Logo</span
+              >
+              <span
+                class="fs-4 fw-bold text-success fw-bolder d-none d-sm-block d-md-none custom-block-below-574"
+                >Nest</span
+              >
+            </div>
+            <p class="text-muted small mb-2">
+              Awesome grocery store website template
+            </p>
+            <ul class="list-unstyled text-muted small">
+              <li class="mb-1">
+                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                Address: 5171 W Campbell Ave undefined Kent, Utah 53127 United
+                States
+              </li>
+              <li class="mb-1">
+                <i class="fa-solid fa-phone text-success me-2"></i> Call
+                Us:(+91) - 540-025-124553
+              </li>
+              <li class="mb-1">
+                <i class="fa-solid fa-envelope text-success me-2"></i>
+                Email:sale@Nest.com
+              </li>
+              <li>
+                <i class="fa-solid fa-clock text-success me-2"></i> Hours:10:00
+                -18:00, Mon - Sat
+              </li>
+            </ul>
+          </div>
+          <!-- Company -->
+          <div class="col-2">
+            <h6 class="fw-bold mb-3">Company</h6>
+            <ul class="list-unstyled text-muted small">
+              <li>
+                <a href="#" class="text-decoration-none text-dark">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Delivery Information</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Support Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Account -->
+          <div class="col-2">
+            <h6 class="fw-bold mb-3">Account</h6>
+            <ul class="list-unstyled text-muted small">
+              <li>
+                <a href="#" class="text-decoration-none text-dark">Sign In</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark">View Cart</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >My Wishlist</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Track My Order</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Help Ticket</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Shipping Details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Compare products</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Corporate -->
+          <div class="col-2">
+            <h6 class="fw-bold mb-3">Corporate</h6>
+            <ul class="list-unstyled text-muted small">
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Become a Vendor</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Affiliate Program</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Farm Business</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Farm Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Our Suppliers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-dark"
+                  >Promotions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-3">
+            <h6 class="fw-bold mb-3">Install App</h6>
+            <div class="mb-2">
+              <a href="#"
+                ><img
+                  src="images/Link → app-store.jpg.png"
+                  alt="App Store"
+                  width="120"
+                  class="me-2"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/Link → google-play.jpg.png"
+                  alt="Google Play"
+                  width="120"
+              /></a>
+            </div>
+            <div class="text-muted small mb-2">Secured Payment Gateways</div>
+            <div class="secure__img border-bottom pb-3">
+              <img src="asstes/img/payment-method.png.png" alt="" />
+            </div>
+
+            <div class="mb-2 d-none d-md-block d-lg-block">
+              <span class="fw-bold">Follow Us</span>
+              <a href="#" class="text-success ms-2"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-success ms-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-success ms-2"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-success ms-2"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+              <a href="#" class="text-success ms-2"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+            <div
+              class="text-muted small d-sm-none d-md-block custom-block-below-574"
+            >
+              Up to 15% discount on your first subscribe
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6 text-muted small">
+            © 2022,
+            <a href="#" class="text-success text-decoration-none">Nest</a> -
+            HTML Ecommerce Template<br />
+            All rights reserved
+          </div>
+          <div
+            class="col-md-6 text-md-end mt-3 mt-md-0 d-sm-none d-md-block custom-block-below-574"
+          >
+            <span class="me-4 text-success fw-bold"
+              ><i class="fa-solid fa-phone-volume me-2"></i>2122020
+              <span class="text-muted fw-normal"
+                >Working 8:00 - 22:00</span
+              ></span
+            >
+            <span class="text-success fw-bold"
+              ><i class="fa-solid fa-phone-volume me-2"></i>542124500
+              <span class="text-muted fw-normal"
+                >24/7 Support Center</span
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+      <i
+        class="fa-solid fa-arrow-up position-absolute bottom-0 end-0 m-4 last_thing p-2 d-none d-sm-block d-md-none custom-block-below-574"
+      ></i>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

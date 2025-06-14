@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --bs-navbar-nav-link-padding-x: 14px;
+}
+
+.navbar .container .input-group {
+  border: 1px solid #bce3c9;
+}
+.navbar .container .input-group input {
+  border: none;
+}
+.navbar .container .input-group .btn {
+  background-color: white !important;
+}
+
+.othernav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.othernav .container .lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.othernav .container .support .support__info span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.support {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+
+.outer-carousel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.outer__tabel {
+  border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow: 4px 4px 10px 0 rgba(95, 94, 94, 0.25);
+  padding: 15px;
+}
+
+.firstSection li {
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.inner {
+  background-image: url(../images/Tabpanel.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 75%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner .container h1 {
+  color: #253d4e;
+}
+
+.carousel-indicators {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3bb77e;
+}
+
+.newsletter-group {
+  display: flex;
+  max-width: 500px;
+}
+.newsletter-input {
+  border-radius: 50rem 0 0 50rem !important;
+  border-right: none !important;
+  padding: 0.75rem 1.25rem;
+  flex-grow: 1;
+}
+.newsletter-input:focus {
+  box-shadow: none;
+  border-color: #3bb77e;
+}
+.newsletter-btn {
+  border-radius: 50rem !important;
+  padding: 0.75rem 1.5rem;
+  white-space: nowrap;
+  margin-left: -15px;
+  position: relative;
+  z-index: 2;
+}
+.newsletter__img2 {
+  z-index: 10;
+  margin: 10px;
+}
+
+.first-promo {
+  background-image: url(../images/banner-1.png.png);
+}
+
+.img-third-promo {
+  background-image: url(../images/banner-2.png.png);
+}
+
+.img-second-promo {
+  background-image: url(../images/banner-3.png.png);
+}
+
+.promo__caption {
+  position: relative;
+  z-index: 2;
+  color: black;
+}
+
+.last_thing {
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer {
+  background: #fff;
+}
+footer .fa-success,
+footer .text-success {
+  color: #3bb77e !important;
+}
+footer a.text-success:hover {
+  text-decoration: underline;
+}
+footer .fw-bold {
+  font-weight: 700 !important;
+}
+footer .small {
+  font-size: 0.95rem;
+}
+footer hr {
+  border-top: 1px solid #e0e0e0;
+}/*# sourceMappingURL=main.css.map */
